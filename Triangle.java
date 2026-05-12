@@ -1,0 +1,70 @@
+public class Triangle extends GeometricObject{
+    private int s1, s2, s3;
+
+    public Triangle(){}
+    
+    //ADD CALL TO SUPER
+    public Triangle (int s1, int s2, int s3){
+        super();
+        this.s1 = s1; 
+        this.s2 = s2; 
+        this.s3 = s3; 
+    }
+
+    //ADD CALL TO SUPER
+    public Triangle(int s1, int s2, int s3, String color, boolean filled) {
+        super(color, filled);
+        this.s1 = s1; 
+        this.s2 = s2; 
+        this.s3 = s3; 
+    }
+
+    //COMPLETE THESE FUNCTIONS
+    public double getArea() {        
+        double s = (s1 + s2 + s3)/2.0;
+		double area = Math.sqrt(s*(s-s1)*(s-s2)*(s-s3));
+        return area;
+    }
+
+    @Override
+    public double getPerimeter() {return s1 + s2 + s3;}
+
+
+    //ADD GETDATECREATED()
+    public String toString() {
+        return "The Triangle was created on "  + 
+        getDateCreated() +
+        ". The sides are: " + s1 + ", " + s2 + ", " + s3 + ". The area = " + getArea();
+    }
+
+    public boolean equals(Triangle r){
+        return (this.getArea() == r.getArea() &&
+                this.getPerimeter() == r.getPerimeter());
+    }
+    
+    @Override
+    public int compareTo(GeometricObject other){
+        if (getArea() > other.getArea())
+            return 1;
+        else if (getArea() < other.getArea())
+            return -1;
+        else
+            return 0;
+    }
+
+     
+    @Override
+    public Triangle clone() throws CloneNotSupportedException {
+        Triangle copyT = (Triangle) super.clone();
+
+        //Triangle copyT = new Triangle(this.s1, this.s2, this.s3, this.getColor(), this.isFilled());
+
+        //if (getDateCreated() != null) {
+        //    copyT.setDateCreated(new java.util.Date(getDateCreated().getTime()));
+       // }
+
+        return copyT;
+    }
+    
+
+}
