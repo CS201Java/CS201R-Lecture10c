@@ -5,29 +5,20 @@ public class Triangle extends GeometricObject{
     
     //ADD CALL TO SUPER
     public Triangle (int s1, int s2, int s3){
-        super();
         this.s1 = s1; 
         this.s2 = s2; 
         this.s3 = s3; 
     }
 
-    //ADD CALL TO SUPER
+    //COMPLETE CONSTRUCTOR
     public Triangle(int s1, int s2, int s3, String color, boolean filled) {
-        super(color, filled);
-        this.s1 = s1; 
-        this.s2 = s2; 
-        this.s3 = s3; 
     }
 
     //COMPLETE THESE FUNCTIONS
-    public double getArea() {        
-        double s = (s1 + s2 + s3)/2.0;
-		double area = Math.sqrt(s*(s-s1)*(s-s2)*(s-s3));
-        return area;
-    }
+    public double getArea() {  return 0;}
 
     @Override
-    public double getPerimeter() {return s1 + s2 + s3;}
+    public double getPerimeter() {return 0;}
 
 
     //ADD GETDATECREATED()
@@ -37,10 +28,7 @@ public class Triangle extends GeometricObject{
         ". The sides are: " + s1 + ", " + s2 + ", " + s3 + ". The area = " + getArea();
     }
 
-    public boolean equals(Triangle r){
-        return (this.getArea() == r.getArea() &&
-                this.getPerimeter() == r.getPerimeter());
-    }
+    public boolean equals(Triangle r){return false; }
     
     @Override
     public int compareTo(GeometricObject other){

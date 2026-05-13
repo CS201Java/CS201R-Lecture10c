@@ -8,21 +8,18 @@ public class Rectangle extends GeometricObject{
     private int height;
 
     public Rectangle(){
-        super();
         width = 0;
         height = 0;
     }
 
     //ADD CALL TO SUPER
     public Rectangle (int w, int h){
-        super();
         width = w; 
         height = h;
     }
 
     //ADD CALL TO SUPER
     public Rectangle(int w, int h,String color, boolean filled) {
-        super(color,filled);
         width = w; 
         height = h;
     }
@@ -34,20 +31,15 @@ public class Rectangle extends GeometricObject{
     public void   setheight(int h) {this.height = h;}
 
     //COMPLETE THESE FUNCTIONS
-    public double getArea() {
-        return width*height;}
-    public double getPerimeter() {
-        return 2*width + 2*height;}
+    public double getArea() { return 0;}
+    public double getPerimeter() { return 0;}
+    public boolean equals(Rectangle r){return false;  }
 
     //ADD GETDATECREATED()
     public String toString() {
         return "The rectangle was created on "  + 
         getDateCreated() +
         ". The width is " + width + " and the height is " + height + ". The area = " + getArea();
-    }
-
-    public boolean equals(Rectangle r){
-        return this.width == r.width && this.height == r.height;
     }
 
     @Override
