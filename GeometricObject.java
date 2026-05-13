@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public abstract class GeometricObject implements GeometricInt, Comparable<GeometricObject>, Cloneable{
+public abstract class GeometricObject implements Comparable<GeometricObject>, Cloneable{
     private String color;
     private boolean filled;
     private Date dateCreated;
