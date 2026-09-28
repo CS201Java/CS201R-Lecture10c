@@ -23,4 +23,9 @@ public class Tesla extends Car {
     public String fuelType() {
         return "Electric";
     }
+
+    @Override 
+    public void honk(){
+        System.out.println(brand + " goes whooo hooo");
+    }
 }

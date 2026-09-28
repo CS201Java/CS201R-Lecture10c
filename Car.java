@@ -6,6 +6,7 @@ public abstract class Car implements Vehicle {
         this.brand = brand;
     }
 
+    @Override 
     public void honk() {
         System.out.println(brand + " goes beep beep!");
     }

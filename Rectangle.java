@@ -12,13 +12,13 @@ public class Rectangle extends GeometricObject{
         height = 0;
     }
 
-    //ADD CALL TO SUPER
+    //EX1:  ADD CALL TO SUPER
     public Rectangle (int w, int h){
         width = w; 
         height = h;
     }
 
-    //ADD CALL TO SUPER
+    //EX1: ADD CALL TO SUPER
     public Rectangle(int w, int h,String color, boolean filled) {
         width = w; 
         height = h;
@@ -30,7 +30,7 @@ public class Rectangle extends GeometricObject{
     public void   setWidth(int w) {this.width = w;}
     public void   setheight(int h) {this.height = h;}
 
-    //COMPLETE THESE FUNCTIONS
+    //EX1: COMPLETE THESE FUNCTIONS
     public double getArea() { return 0;}
     public double getPerimeter() { return 0;}
     public boolean equals(Rectangle r){return false;  }
